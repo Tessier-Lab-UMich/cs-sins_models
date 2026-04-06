@@ -22,13 +22,13 @@ import pandas as pd
 import joblib
 
 # read in the dataframe with properties from MOE
-df = pd.read_csv(<path to csv files containing properties>
+df = pd.read_csv(<path to csv files containing properties>)
 
 # import the model
 model = joblib.load('CSSINS_Classifier.pkl')
 
 # predict CS-SINS
-X = df[[app_charge, zquadrupole]]
+X = df[['app_charge', 'zquadrupole']]
 predictions = model.predict(X)
 ```
 
